@@ -26,6 +26,7 @@ function setHours(){
     
     if(isNaN(hours) || hours < 0 || hours > 25){
       alert("Incorrect input!");
+      return 0;
       
     }else {
       alert("Thank you!");
@@ -225,6 +226,7 @@ function insertWeek(){
     
     if(isNaN(week) || week < 0 || week > 53){
       alert("Incorrect input!");
+      break
       
     }else {
       alert("Thank you!");
