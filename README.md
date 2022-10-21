@@ -1,10 +1,5 @@
-# Pekkantti
-
-
-Tekijät: Antti Mannila ja Pekka Komulainen
-Javascript course Laurea 2022
-
-
+Pekkantti
+Tekijät: Antti Mannila ja Pekka Komulainen Javascript course Laurea 2022
 
 This application is created to help you calculate your weekly time consumption .
 
@@ -15,3 +10,7 @@ After your added your hours, you can sum them by using "sum all" button. It will
 You can save your weekly hours by using "insert data" button.
 
 You download your weekly hours by using "get data" button, and using week number which hours you would like to see.
+
+Arvioinnista:
+
+Meidän projekti on noin 25 pisteen arvoinenn. Aplikaatiosta löytyy kaikki tarpeellinen, ainut mitä siitä puuttuu on virheen sattuessa highlitatut boksit. Olemme kuitenkin tehneet kaiken tarpeellisen lisäksi dropboxin, jonka lisäksi aplikaatiomme on miellyttävä silmälle.
