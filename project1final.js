@@ -3,6 +3,7 @@ function button() {
 }
 
 window.onclick = function(event) {
+  // Dropbutton
   if (!event.target.matches('.dropbutton')) {
     var dropdowns = document.getElementsByClassName("activity_content");
     var i;
@@ -16,15 +17,18 @@ window.onclick = function(event) {
 }
 
 function setDate(){
+  // Set date
   day = prompt('For which day you want to add hours?\nYou can use abbreviation.')
   return day
 }
 function setHours(){
+  // Set hours
   while (true){
     hours = prompt('Input your hours please:')
     hours = parseFloat(hours);
     
     if(isNaN(hours) || hours < 0 || hours > 25){
+      // Checks input is number
       alert("Incorrect input!");
       return 0;
       
@@ -37,6 +41,7 @@ function setHours(){
 
 var totalworkhours = [0,0,0,0,0,0,0];
 function setWork(){
+  // Saves work hours
   
   date = setDate()
   
@@ -84,6 +89,7 @@ function setWork(){
  
 totalstudyhours = [0,0,0,0,0,0,0]
 function setStudies(){
+  // Saves study hours
   
   date = setDate()
   
@@ -131,6 +137,7 @@ function setStudies(){
 
 totalhobbyhours = [0,0,0,0,0,0,0]
 function setHobbies(){
+  // Saves hobby hours
   date = setDate()
   
   if (date == "monday"||date == "mon"){
@@ -176,6 +183,7 @@ function setHobbies(){
 }
     
 function totalWork(){
+  // Calculates total work hours
   totalwork = 0;
   for (var i = 0; i < totalworkhours.length; i++) {
     console.log(totalworkhours[i]);
@@ -185,6 +193,7 @@ function totalWork(){
 }
 
 function totalStudy(){
+  // Calculates total study hours
   totalstudy = 0;
   for (var i = 0; i < totalstudyhours.length; i++) {
     console.log(totalstudyhours[i]);
@@ -194,6 +203,7 @@ function totalStudy(){
 }
 
 function totalHobby(){
+  // Calculates total hobby hours
   totalhobby = 0;
   for (var i = 0; i < totalhobbyhours.length; i++) {
     console.log(totalhobbyhours[i]);
@@ -203,6 +213,7 @@ function totalHobby(){
 }
 
 function allTotal(){
+  // Calculates all hours together
   totalWork()
   totalStudy()
   totalHobby()
@@ -220,6 +231,7 @@ function allTotal(){
 }
 
 function insertWeek(){
+  // Lets user insert week
   while (true){
     week = prompt('Save/get weekly hours:\nselect week please.')
     week = parseFloat(week);
@@ -236,7 +248,7 @@ function insertWeek(){
   }
 
   function save_data(){
-    //print()
+    //Saves user data to local storage
     weeknro = insertWeek()
     const d = new Date();
     console.log(d, weeknro)
@@ -245,6 +257,7 @@ function insertWeek(){
   }
 
   function get_data(){
+    // Gets user data from local storage
     tallennus = document.getElementById("testi").innerHTML = localStorage.getItem(insertWeek());
     for (var i = 0; i < tallennus.length; i++) {
       console.log(tallennus[i]);
@@ -253,7 +266,7 @@ function insertWeek(){
 
  
   function procent() {
-    
+    // Calculates percents 
     var hobbyprc = totalHobby() / allTotal() * 100;
     let rounder = hobbyprc.toFixed(0) + "%";
     document.getElementById("hobby%").innerHTML = rounder;
@@ -264,4 +277,3 @@ function insertWeek(){
     let rounder2 = workprc.toFixed(0) + "%";
     document.getElementById("work%").innerHTML = rounder2;
   }
-  
